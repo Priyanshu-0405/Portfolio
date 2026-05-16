@@ -1,8 +1,4 @@
-// =============================================
-//  main.js — Priyanshu Priyadarshi Portfolio
-// =============================================
-
-// ── Skills Tab Switcher ──
+// Skills Tab Switcher
 function showSkill(id, btn) {
   document.querySelectorAll('.skill-panel').forEach(panel => {
     panel.classList.remove('active');
@@ -19,10 +15,10 @@ function showSkill(id, btn) {
   }
 }
 
-// ── Run DOM-dependent code AFTER page loads ──
+// Run DOM-dependent code AFTER page loads 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ── Scroll Fade-in Animation ──
+  // Scroll Fade-in Animation
   const fadeElements = document.querySelectorAll('.fade-up');
 
   const fadeObserver = new IntersectionObserver((entries, observer) => {
@@ -36,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeElements.forEach(el => fadeObserver.observe(el));
 
-  // ── Active Nav Link Highlight ──
+  // Active Nav Link Highlight
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -58,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── Smooth Scroll ──
+  // Smooth Scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
